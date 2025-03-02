@@ -7,9 +7,9 @@
             <router-link to="/" active-class="active-link">Home</router-link>
           </li>
         </ul>
-        <ul>
+        <ul v-for="[route, module] in Object.entries(apps)" :key="module">
           <li>
-            <router-link to="/app" active-class="active-link">Application</router-link>
+            <router-link :to="`/${route}`" active-class="active-link">{{ route }}</router-link>
           </li>
         </ul>
       </div>
@@ -24,7 +24,9 @@
     </main>
   </div>
 </template>
-
+<script setup lang="ts">
+import { apps } from "../../single-spa.setup.ts";
+</script>
 
 <style scoped>
 /* Minimal styling for the layout */

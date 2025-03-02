@@ -1,7 +1,7 @@
 import { registerApplication, start } from "single-spa"
 
 export const apps = {
-  "app" : "@howlydev/app"
+  app : "@howlydev/app"
 }
 
 export function registerSpas() {
@@ -10,6 +10,9 @@ export function registerSpas() {
       name: route,
       app: () => import(/* @vite-ignore */ moduleName),
       activeWhen: `/${route}`,
+      customProps: {
+        basePath: `/${route}`
+      }
     });
   }
 

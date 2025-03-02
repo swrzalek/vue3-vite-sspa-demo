@@ -4,25 +4,30 @@ import singleSpaVue from 'single-spa-vue'
 import {createApp, h} from "vue";
 import router from './router'
 
+type Props = {
+  name: string,
+  basePath: string,
+}
+
 const vueLifecycles = singleSpaVue({
   createApp,
   appOptions: {
     render() {
+      const { name, basePath } = this as unknown as Props;
       return h(App, {
-        props: {
-          name: this.name,
-        },
+        name: name,
+        basePath: basePath,
       });
     },
   },
-  handleInstance: (app) => {
-    app.use(router);
+  handleInstance: (app, props: Props) => {
+    app.use(router(props.basePath));
   }
 });
 
 const mountVue = () => {
   const app = createApp(App)
-  app.use(router)
+  app.use(router())
   app.mount('#app')
 }
 
