@@ -1,0 +1,5 @@
+{
+  "imports": {
+    "@howlydev/app": "http://localhost:4101/src/main.ts"
+  }
+}
