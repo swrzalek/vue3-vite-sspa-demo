@@ -49,7 +49,7 @@ This project demonstrates a micro frontend architecture using Single-SPA as the 
 2. In a separate terminal, start the micro frontend application:
    ```bash
    cd app
-   npm run dev
+   npm run dev:sspa
    ```
 
 3. Access the application at `http://localhost:5173`

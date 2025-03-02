@@ -26,8 +26,7 @@ const mountVue = () => {
   app.mount('#app')
 }
 
-console.log(import.meta.env.MODE === 'development')
-if (import.meta.env.DEV) {
+if (import.meta.env.MODE === 'development') {
   mountVue();
 }
 
