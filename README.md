@@ -1,5 +1,7 @@
 # Micro Frontend Architecture with Single-SPA
 
+![image](https://github.com/user-attachments/assets/7ef3a5b7-d838-4c49-8fa2-01e711805084)
+
 ## Overview
 
 This project demonstrates a micro frontend architecture using Single-SPA as the framework for integrating multiple frontend applications. The project consists of a root application that serves as a container and various micro frontend applications that can be developed and deployed independently.
