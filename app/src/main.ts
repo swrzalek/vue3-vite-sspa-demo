@@ -26,9 +26,10 @@ const mountVue = () => {
   app.mount('#app')
 }
 
-// if (import.meta.env.DEV) {
-//   mountVue();
-// }
+console.log(import.meta.env.MODE === 'development')
+if (import.meta.env.DEV) {
+  mountVue();
+}
 
 export const bootstrap = vueLifecycles.bootstrap;
 export const mount = vueLifecycles.mount;

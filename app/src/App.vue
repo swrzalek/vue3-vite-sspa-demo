@@ -1,5 +1,5 @@
 <template>
-  <Teleport to=".container">
+  <Teleport to=".container" :disabled="isTeleportDisabled">
     <div style="background-color: lightcoral">
       <h1>Hello From the Microfrontend</h1>
       <router-view />
@@ -12,4 +12,5 @@
 </template>
 
 <script setup lang="ts">
+const isTeleportDisabled = import.meta.env.MODE === 'development';
 </script>
