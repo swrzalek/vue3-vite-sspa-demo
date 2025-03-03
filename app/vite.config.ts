@@ -1,4 +1,4 @@
-import { fileURLToPath, URL } from 'node:url'
+import {fileURLToPath, URL} from 'node:url'
 
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
@@ -10,7 +10,8 @@ export default defineConfig({
     vue(),
     vitePluginSingleSpa({
       type: 'mife',
-      serverPort: 4101
+      serverPort: 4101,
+      spaEntryPoints: 'src/main.ts',
     })
   ],
   resolve: {
@@ -19,6 +20,6 @@ export default defineConfig({
     },
   },
   server: {
-    port: 3000
-  }
+    port: 4101
+  },
 })
