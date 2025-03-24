@@ -1,5 +1,7 @@
 # Micro Frontend Architecture with Single-SPA
 
+[https://dev.to/swrzalek/building-a-microfrontend-architecture-with-vue-3-vite-single-spa-b6d](https://dev.to/swrzalek/building-a-microfrontend-architecture-with-vue-3-vite-single-spa-b6d)
+
 ![image](https://github.com/user-attachments/assets/7ef3a5b7-d838-4c49-8fa2-01e711805084)
 
 ## Overview
